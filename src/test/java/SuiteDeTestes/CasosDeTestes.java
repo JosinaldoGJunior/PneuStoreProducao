@@ -1,4 +1,6 @@
 package SuiteDeTestes;
 
-public class CasosDeTestes {
+import Pages.BasePage;
+
+public class CasosDeTestes extends BasePage {
 }
