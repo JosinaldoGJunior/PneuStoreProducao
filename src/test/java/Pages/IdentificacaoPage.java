@@ -1,6 +1,19 @@
 package Pages;
 
-public class IdentificacaoPage {
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
-   usarendereço =  id.btn-select-address-0
+public class IdentificacaoPage {
+   private WebDriver driver;
+   public IdentificacaoPage(WebDriver driver) {
+      this.driver = driver;
+   }
+
+   private By elclickEndereco = By.id("btn-select-address-0");
+
+   public EntregaPage ClickEndereco(){
+      driver.findElement(elclickEndereco).click();
+      return new EntregaPage(driver);
+   }
+
 }

@@ -1,6 +1,18 @@
 package Pages;
 
-public class EntregaPage {
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
-    escolher endereço - id.input-3
+public class EntregaPage {
+    private WebDriver driver;
+    public EntregaPage(WebDriver driver) {
+        this.driver = driver;
+    }
+    private By elclickEntrega = By.id("deliveryMethodSubmit");
+
+    public PagamentoPage ClickEntrega(){
+        driver.findElement(elclickEntrega).click();
+        return new PagamentoPage(driver);
+    }
+    // escolher endereço - id.input-3
 }

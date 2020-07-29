@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class BasePage {
 
     public WebDriver driver;
+    protected  LoginPage loginPage;
 
     @Before
     public void testInicio(){
@@ -20,13 +21,14 @@ public class BasePage {
         navegador.addArguments("--start-maximized");
         //  pots.addArguments("--headless"); //Rodar com navegador fechado
         driver = new ChromeDriver(navegador);
-       // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); // Não usar a Explicita e Implicita
-        driver.get("https://pneustore.com.br");
-
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); // Não usar a Explicita e Implicita
     }
 
     @BeforeEach
-
+    public void acessoPagina(){
+        driver.get("https://pneustore.com.br/login");
+        loginPage = new LoginPage(driver);
+    }
 
     @After
     public void testfim(){
