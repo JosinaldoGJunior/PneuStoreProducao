@@ -1,30 +1,87 @@
 package Pages;
 
+import Core.BasePage;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LoginPage {
+import static Core.DriverFactory.getDriver;
 
-        private WebDriver driver;
-        public LoginPage(WebDriver driver){
-                this.driver = driver;
-        }
-        private By elUsuario = By.id("j_username");
-        private By elSenha = By.id("j_password");
-        private By elBtnLogin = By.id("btn-login");
+public class LoginPage  extends BasePage {
 
-        public void usuario(){
+        //        public void acessarTelaInicial(){
+//                DriverFactory.getDriver().get("https://www.pneustore.com.br/login");
+//        }
 
-                driver.findElement(elUsuario).sendKeys("prod-pneus@yopmail.com");
-        }
-
-        public void senha(){
-
-                driver.findElement(elSenha).sendKeys("josi2020");
+        public String verificarLogin(){
+         WebDriverWait wait = new WebDriverWait(getDriver(), 10);
+         wait.until(ExpectedConditions.elementToBeClickable(By.id("logged")));
+         return obterTexto(By.id("logged"));
         }
 
-        public HomePage btnLogin(){
-                driver.findElement(elBtnLogin).click();
-                return new HomePage(driver);
+        public void logar(){
+                emailUsuarioAntigo();
+                senhaUsuarioAntigo();
+                btnEntrar();
+                verificarLogin();
         }
+
+        /********* Usuário Antigo ************/
+
+        public void emailUsuarioAntigo(){
+                WebDriverWait wait = new WebDriverWait(getDriver(), 10);
+                wait.until(ExpectedConditions.elementToBeClickable(By.id("j_username")));
+                escreverTexto("j_username","josinaldojgsj@hotmail.com");
+        }
+
+        public void senhaUsuarioAntigo(){
+                escreverTexto("j_password","josi2020");
+        }
+
+        public void btnEntrar(){
+                cliqueBotao("btn-login");
+        }
+
+        /********* Usuário Novo ************/
+
+        public void primeiroNomeUsuarioNovo(String nome){
+                WebDriverWait wait = new WebDriverWait(getDriver(), 10);
+                wait.until(ExpectedConditions.elementToBeClickable(By.id("register.firstName")));
+                escreverTexto("register.firstName",nome);
+        }
+
+        public void ultimoNomeUsuarioNovo(String ultimo){
+                escreverTexto("register.lastName",ultimo);        }
+
+        public void cpfUsuarioNovo(String cpf){ escreverTexto("register.cpf",cpf); }
+
+        public void dataNascimentoUsuarioNovo(String data){
+                escreverTexto("register.birthDay",data);
+        }
+
+        public void telefoneUsuarioNovo(String tel){
+                escreverTexto("register.phone",tel);
+        }
+
+        public void emailUsuarioNovo(){
+                escreverTexto("register.email", RandomStringUtils.randomAlphabetic (8)+"teste@gmail.com");
+        }
+
+        public void criarSenhaUsuarioNovo(String password){
+                escreverTexto("password",password);
+        }
+
+        public void confirmarSenhaUsuarioNovo(String confirmarpassword){
+                escreverTexto("register.checkPwd",confirmarpassword);
+        }
+
+        public void termosUsuarioNovo(){
+                cliqueRadio("registerChkTermsConditions");
+        }
+
+        public void btnFinalizarCadastro(){
+                cliqueBotao("registerBtn");
+        }
+
 }
