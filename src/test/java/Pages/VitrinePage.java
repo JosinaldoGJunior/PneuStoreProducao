@@ -24,7 +24,6 @@ public class VitrinePage extends BasePage {
         return obterTexto(By.xpath("//div[3]/div/div[3]/div/div[2]"));
     }
 
-
     /********* Busca por Medidas ************/
 
     public String vitrineObterLargura(){
@@ -55,7 +54,6 @@ public class VitrinePage extends BasePage {
         return obterTexto(By.cssSelector(".facet__values:nth-child(1) li:nth-child(5)"));
     }
 
-
     /********* Busca por Veiculo ************/
     public String vitrineBuscaPorVeiculoMarca(){
         return obterTexto(By.cssSelector(".facet__values:nth-child(1) li:nth-child(1)"));
@@ -79,7 +77,6 @@ public class VitrinePage extends BasePage {
         return obterTexto(By.cssSelector(".facet__values:nth-child(1) li:nth-child(1)"));
     }
 
-
     /********* Cliques ************/
 
     public void clickItem(){
@@ -87,6 +84,4 @@ public class VitrinePage extends BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//ul/div/div/a/img")));
         clicarLinkXpath("//ul/div/div/a/img");
     }
-
-
 }

@@ -92,6 +92,4 @@ public class HomePage extends BasePage {
         mouseOverCSS(".not_logged_in__login");
         cliqueBotao("login");
     }
-
-
 }

@@ -1,23 +1,20 @@
 package Pages;
 
 import Core.BasePage;
+import Core.GeradorDeCPF;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import static Core.DriverFactory.getDriver;
 
 public class LoginPage  extends BasePage {
-
-        //        public void acessarTelaInicial(){
-//                DriverFactory.getDriver().get("https://www.pneustore.com.br/login");
-//        }
+        GeradorDeCPF geradorDeCPF = new GeradorDeCPF();
 
         public String verificarLogin(){
-         WebDriverWait wait = new WebDriverWait(getDriver(), 10);
-         wait.until(ExpectedConditions.elementToBeClickable(By.id("logged")));
-         return obterTexto(By.id("logged"));
+                WebDriverWait wait = new WebDriverWait(getDriver(), 10);
+                wait.until(ExpectedConditions.elementToBeClickable(By.id("logged")));
+                return obterTexto(By.id("logged"));
         }
 
         public void logar(){
@@ -54,7 +51,10 @@ public class LoginPage  extends BasePage {
         public void ultimoNomeUsuarioNovo(String ultimo){
                 escreverTexto("register.lastName",ultimo);        }
 
-        public void cpfUsuarioNovo(String cpf){ escreverTexto("register.cpf",cpf); }
+        public void cpfUsuarioNovo(){
+                escreverTexto("register.cpf",geradorDeCPF.geraCPFFinal());
+                System.out.println(geradorDeCPF.geraCPFFinal());
+        }
 
         public void dataNascimentoUsuarioNovo(String data){
                 escreverTexto("register.birthDay",data);
@@ -64,8 +64,12 @@ public class LoginPage  extends BasePage {
                 escreverTexto("register.phone",tel);
         }
 
+        static String emailnovo = "";
         public void emailUsuarioNovo(){
-                escreverTexto("register.email", RandomStringUtils.randomAlphabetic (8)+"teste@gmail.com");
+                String email =  (RandomStringUtils.randomAlphabetic (8)+"teste@gmail.com");
+                escreverTexto("register.email",email);
+                emailnovo = email;
+                System.out.println(emailnovo);
         }
 
         public void criarSenhaUsuarioNovo(String password){
@@ -83,5 +87,4 @@ public class LoginPage  extends BasePage {
         public void btnFinalizarCadastro(){
                 cliqueBotao("registerBtn");
         }
-
 }

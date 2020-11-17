@@ -14,7 +14,6 @@ import org.junit.runners.Suite;
         BuscaPorMedidaTest.class,
         FluxoCompraTest.class
 })
-
 public class SuiteDeTestes {
 }
 

@@ -1,9 +1,7 @@
 package Pages;
 
-
 import Core.BasePage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -28,15 +26,10 @@ public class CarrinhoPage extends BasePage {
     }
 
     public void modoDeEntregaNormal(){
-//       WebDriverWait wait  = new WebDriverWait(getDriver(),1000);
-//        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[3]/ul/li/div/label/span")));
-       WebDriverWait wait  = new WebDriverWait(getDriver(),10);
-      //  wait.until(ExpectedConditions.visibilityOfAllElements(By.xpath("ad"),"asd");
     }
-    public void modoDeEntregaNormalx(){
-        //cliqueBotaoCSS(".regular-options__list > .delivery-options-item > .items-center");
 
-        cliqueBotaoXpath("//li[3]/ul/li/div/label/span");
+    public void modoDeEntregaNormalx(){
+              cliqueBotaoXpath("//li[3]/ul/li/div/label/span");
     }
 
     public void clickFinalizarCompra(){

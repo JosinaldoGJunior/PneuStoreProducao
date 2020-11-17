@@ -6,7 +6,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class BuscarTest extends BaseTest {
-    private LoginPage loginPage = new LoginPage();
     private HomePage homePage = new HomePage();
     private VitrinePage vitrinePage = new VitrinePage();
     private ItemPage itemPage = new ItemPage();
@@ -14,9 +13,6 @@ public class BuscarTest extends BaseTest {
 
     @Test
     public void testBuscarPorItemPirelli(){
-//        loginPage.logar();
-//        Assert.assertEquals("Olá Lucas!",loginPage.verificarLogin());
-
         homePage.barraDePesquisa("10070090");
         homePage.clickLupa();
         Assert.assertEquals("Pneu Pirelli Aro 16 Cinturato P7 195/55R16 91V XL",vitrinePage.vitrineObterTitulo());
@@ -27,12 +23,10 @@ public class BuscarTest extends BaseTest {
         Assert.assertEquals("em até 10x de R$ 57,99 sem juros",itemPage.obterPrecoParceladoItem());
         itemPage.clickBtnComprar();
         Assert.assertEquals("R$ 579,90",carrinhoPage.verificarSubTotal());
-
     }
 
     @Test
     public void testBuscarPorItemContinental(){
-
         homePage.barraDePesquisa("10120011");
         homePage.clickLupa();
         Assert.assertEquals("Pneu Continental Aro 16 ContiPowerContact 195/55R16 87V",vitrinePage.vitrineObterTitulo());
@@ -44,10 +38,6 @@ public class BuscarTest extends BaseTest {
                 "Veja mais opções de parcelamento clicando aqui!",itemPage.obterPrecoParceladoItem());
         itemPage.clickBtnComprar();
         Assert.assertEquals("R$ 478,62",carrinhoPage.verificarSubTotal());
-
     }
-
-
-
 }
 

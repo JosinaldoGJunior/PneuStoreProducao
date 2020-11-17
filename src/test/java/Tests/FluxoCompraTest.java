@@ -35,6 +35,4 @@ public class FluxoCompraTest extends BaseTest {
         Thread.sleep(5000);
         pagamentoPage.FinalizaSuaCompra();
     }
-
-
 }

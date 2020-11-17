@@ -7,12 +7,11 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class BuscaPorMedidaTest extends BaseTest {
-
     private HomePage homePage = new HomePage();
     private VitrinePage vitrinePage = new VitrinePage();
 
     @Test
-    public void buscaSemRunFlat() throws InterruptedException {
+    public void buscaPorMedidaSemRunFlat() throws InterruptedException {
         homePage.buscarPorMedidaLargura("215");
         Thread.sleep(1000);
         homePage.buscarPorMedidaPerfil("65");
@@ -25,7 +24,7 @@ public class BuscaPorMedidaTest extends BaseTest {
     }
 
     @Test
-    public void buscaComRunFlat() throws InterruptedException {
+    public void buscaPorMedidaComRunFlat() throws InterruptedException {
         homePage.buscarPorMedidaLargura("195");
         Thread.sleep(1000);
         homePage.buscarPorMedidaPerfil("55");
@@ -65,5 +64,4 @@ public class BuscaPorMedidaTest extends BaseTest {
         Thread.sleep(2000);
         Assert.assertEquals("185 ", vitrinePage.vitrineBuscaPorPlaca());
     }
-
 }
