@@ -1,6 +1,7 @@
 package Core;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -22,12 +23,17 @@ public class BasePage {
     public void escreverTextoXpath(String xpath, String texto){
         escreverTexto((By.xpath(xpath)),texto);
     }
+
     public void escreverTextoCSS(String CSS, String texto){
         escreverTexto((By.cssSelector(CSS)),texto);
     }
 
     public String obterTexto(By by) {
         return getDriver().findElement(by).getText();
+    }
+
+    public void escreverSemClear(String id, String texto){
+        getDriver().findElement(By.id(id)).sendKeys(texto);
     }
 
     /********* Botao ************/
@@ -77,4 +83,12 @@ public class BasePage {
         WebElement menu = getDriver().findElement(By.cssSelector(CSS_over));
         acao.moveToElement(menu).perform();
     }
+
+    /******** Teclado *******/
+
+    public void apertarEnterTeclado(String id_enter) {
+        getDriver().findElement(By.id(id_enter)).sendKeys(Keys.ENTER);
+    }
+
+
 }

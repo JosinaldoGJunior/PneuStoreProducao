@@ -60,7 +60,7 @@ public class VitrinePage extends BasePage {
     }
 
     public String vitrineBuscaPorVeiculoModelo(){
-       return obterTexto(By.cssSelector(".facet__values:nth-child(1) li:nth-child(2)"));
+        return obterTexto(By.cssSelector(".facet__values:nth-child(1) li:nth-child(2)"));
     }
 
     public String vitrineBuscaPorVeiculoAno(){
@@ -79,9 +79,15 @@ public class VitrinePage extends BasePage {
 
     /********* Cliques ************/
 
-    public void clickItem(){
+    public void clickItemXpath(){
         WebDriverWait wait = new WebDriverWait(getDriver(), 10);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//ul/div/div/a/img")));
         clicarLinkXpath("//ul/div/div/a/img");
+    }
+
+    public void clickItemCss(){
+        WebDriverWait wait = new WebDriverWait(getDriver(), 10);
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".product-grid-item:nth-child(1) .w-auto")));
+        cliqueBotaoCSS(".product-grid-item:nth-child(1) .w-auto");
     }
 }

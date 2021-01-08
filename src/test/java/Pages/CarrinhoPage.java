@@ -29,13 +29,11 @@ public class CarrinhoPage extends BasePage {
     }
 
     public void modoDeEntregaNormalx(){
-              cliqueBotaoXpath("//li[3]/ul/li/div/label/span");
+        cliqueBotaoXpath("//li[3]/ul/li/div/label/span");
     }
 
     public void clickFinalizarCompra(){
-        WebDriverWait wait = new WebDriverWait(getDriver(), 10);
-        wait.until(ExpectedConditions.elementToBeClickable(By.id("btn-continue-checkout")));
-       cliqueBotao("btn-continue-checkout");
+        cliqueBotao("btn-continue-checkout");
     }
 
 }

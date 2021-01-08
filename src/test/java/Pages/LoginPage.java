@@ -29,11 +29,11 @@ public class LoginPage  extends BasePage {
         public void emailUsuarioAntigo(){
                 WebDriverWait wait = new WebDriverWait(getDriver(), 10);
                 wait.until(ExpectedConditions.elementToBeClickable(By.id("j_username")));
-                escreverTexto("j_username","josinaldojgsj@hotmail.com");
+                escreverTexto("j_username","jmtudfqfteste@gmail.com");
         }
 
         public void senhaUsuarioAntigo(){
-                escreverTexto("j_password","josi2020");
+                escreverTexto("j_password","pneu2020");
         }
 
         public void btnEntrar(){

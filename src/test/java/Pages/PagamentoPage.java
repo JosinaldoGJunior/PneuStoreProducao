@@ -13,7 +13,7 @@ public class PagamentoPage extends BasePage {
         WebDriverWait wait = new WebDriverWait(getDriver(), 10);
         wait.until(ExpectedConditions.elementToBeClickable(By.id("installmentSelect")));
         selecionarCombo("installmentSelect","1");
-      }
+    }
 
     public void pagCreditoNumeroCartao(){
         escreverTexto("encryptedCardNumber","4111 1111 1111 1111");
@@ -31,13 +31,22 @@ public class PagamentoPage extends BasePage {
     }
 
     public void PagBoleto(){
+        WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".flex-grow:nth-child(4)")));
         cliqueBotaoCSS(".flex-grow:nth-child(4)");
     }
 
     public void FinalizaSuaCompra(){
-        WebDriverWait wait = new WebDriverWait(getDriver(), 10);
+        WebDriverWait wait = new WebDriverWait(getDriver(), 20);
         wait.until(ExpectedConditions.elementToBeClickable(By.id("nextButtonSubmit")));
         cliqueBotao("nextButtonSubmit");
     }
+
+    public String ObterNumeroPedido(){
+        WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".order-number")));
+        return obterTexto(By.cssSelector(".order-number"));
+    }
+
 
 }

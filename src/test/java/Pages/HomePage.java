@@ -4,12 +4,20 @@ import Core.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import static Core.DriverFactory.getDriver;
 
 public class HomePage extends BasePage {
 
     public void barraDePesquisa(String id_item){
-         escreverTexto("js-site-search-input",id_item);
+        WebDriverWait wait = new WebDriverWait(getDriver(), 10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("js-site-search-input")));
+        escreverSemClear("js-site-search-input",id_item);
+
+    }
+
+    public void apertarEnter(){
+        apertarEnterTeclado("js-site-search-input");
     }
 
     public void clickLupa(){
@@ -35,25 +43,32 @@ public class HomePage extends BasePage {
     public void buscarPorMedidaPerfil(String perfil){
         WebDriverWait wait = new WebDriverWait(getDriver(), 10);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("tireHeight")));
-       selecionarCombo("tireHeight",perfil);
+        selecionarCombo("tireHeight",perfil);
 
     }
 
     public void buscarPorMedidaAro(String aro){
         WebDriverWait wait = new WebDriverWait(getDriver(), 10);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("tireDiameter")));
-       selecionarCombo("tireDiameter",aro);
+        selecionarCombo("tireDiameter",aro);
     }
 
     /********* Buscar por Veiculo ************/
 
-    public void btnBuscarVeiculo(){ cliqueBotao("searchButtonVehicle"); }
+    public void btnBuscarVeiculo(){
+        WebDriverWait wait = new WebDriverWait(getDriver(), 10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("vehicleSearchBtn")));
+        cliqueBotao("searchButtonVehicle"); }
 
     public void buscaPorVeiculo(){
+        WebDriverWait wait = new WebDriverWait(getDriver(), 10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("vehicleSearchBtn")));
         cliqueBotao("vehicleSearchBtn");
     }
 
     public void selecionarMarca(String marca){
+        WebDriverWait wait = new WebDriverWait(getDriver(), 10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("brand")));
         selecionarCombo("brand",marca);
     }
 
@@ -92,4 +107,13 @@ public class HomePage extends BasePage {
         mouseOverCSS(".not_logged_in__login");
         cliqueBotao("login");
     }
+
+    /********* Clicar Pneus Passeio ************/
+
+    public  void  clickPneuPasseio(){
+        mouseOverXpath("//a[contains(text(),'Qual Pneu você precisa?')]");
+        cliqueBotaoXpath("//a[contains(text(),'Qual Pneu você precisa?')]");
+        cliqueBotaoXpath("//a[contains(@href, '/categorias/passeio')]");
+    }
+
 }

@@ -11,9 +11,9 @@ public class EnderecoPage extends BasePage {
 
     public void selecionarEndereco(){
         WebDriverWait wait = new WebDriverWait(getDriver(), 10);
-        wait.until(ExpectedConditions.elementToBeClickable(By.id("8877359366167")));
-        cliqueRadio("8877359366167");
-        }
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("8908023332887")));
+        cliqueRadio("8908023332887");
+    }
 
     public void btnProximoEndereco() {
         WebDriverWait wait = new WebDriverWait(getDriver(), 10);

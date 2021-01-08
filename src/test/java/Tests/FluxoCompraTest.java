@@ -15,24 +15,132 @@ public class FluxoCompraTest extends BaseTest {
     PagamentoPage pagamentoPage = new PagamentoPage();
 
     @Test
-    public void fluxoCompletoDeCompraBoleto() throws Exception {
-        homePage.barraDePesquisa("10040261");
+    public void fluxoCompletoBoletoItemPorPesquisaNormal() throws Exception {
+        Thread.sleep(2000);
+        homePage.barraDePesquisa("1012");
+        Thread.sleep(1000);
+        homePage.barraDePesquisa("0011");
+        Thread.sleep(1000);
+        homePage.apertarEnter();
+        Thread.sleep(1000);
         homePage.clickLupa();
-        vitrinePage.clickItem();
+        Thread.sleep(1000);
+        vitrinePage.clickItemCss();
+        Thread.sleep(1000);
         itemPage.clickBtnComprar();
+        Thread.sleep(5000);
         carrinhoPage.clickFinalizarCompra();
         loginPage.emailUsuarioAntigo();
         loginPage.senhaUsuarioAntigo();
         loginPage.btnEntrar();
+        Thread.sleep(7000);
         enderecoPage.selecionarEndereco();
-        Thread.sleep(3000);
+        Thread.sleep(7000);
         enderecoPage.btnProximoEndereco();
-        Thread.sleep(5000);
-        entregaPage.clickTipoDeEntregue();
+        Thread.sleep(7000);
+        entregaPage.clickTipoDeEntregueNormal();
+        Thread.sleep(7000);
         entregaPage.btnProximoEntrega();
-        Thread.sleep(5000);
+        Thread.sleep(7000);
         pagamentoPage.PagBoleto();
-        Thread.sleep(5000);
+        Thread.sleep(7000);
         pagamentoPage.FinalizaSuaCompra();
+        Thread.sleep(7000);
+        System.out.println(pagamentoPage.ObterNumeroPedido());
     }
+
+    @Test
+    public void fluxoCompletoBoletoItemPorCategoriaNormal() throws Exception {
+        Thread.sleep(2000);
+        homePage.clickPneuPasseio();
+        vitrinePage.clickItemCss();
+        itemPage.clickBtnComprar();
+        Thread.sleep(5000);
+        carrinhoPage.clickFinalizarCompra();
+        Thread.sleep(1000);
+        loginPage.emailUsuarioAntigo();
+        Thread.sleep(1000);
+        loginPage.senhaUsuarioAntigo();
+        loginPage.btnEntrar();
+        Thread.sleep(7000);
+        enderecoPage.selecionarEndereco();
+        Thread.sleep(7000);
+        enderecoPage.btnProximoEndereco();
+        Thread.sleep(7000);
+        entregaPage.clickTipoDeEntregueNormal();
+        Thread.sleep(7000);
+        entregaPage.btnProximoEntrega();
+        Thread.sleep(7000);
+        pagamentoPage.PagBoleto();
+        Thread.sleep(7000);
+//        pagamentoPage.FinalizaSuaCompra();
+//        Thread.sleep(7000);
+//        System.out.println(pagamentoPage.ObterNumeroPedido());
+    }
+
+
+    @Test
+    public void fluxoCompletoBoletoItemPorPesquisaRetira() throws Exception {
+        Thread.sleep(2000);
+        homePage.barraDePesquisa("1012");
+        Thread.sleep(1000);
+        homePage.barraDePesquisa("0011");
+        homePage.apertarEnter();
+        homePage.clickLupa();
+        Thread.sleep(5000);
+        vitrinePage.clickItemCss();
+        Thread.sleep(5000);
+        itemPage.clickBtnComprar();
+        Thread.sleep(5000);
+        carrinhoPage.clickFinalizarCompra();
+        loginPage.emailUsuarioAntigo();
+        loginPage.senhaUsuarioAntigo();
+        loginPage.btnEntrar();
+        Thread.sleep(7000);
+        enderecoPage.selecionarEndereco();
+        Thread.sleep(7000);
+        enderecoPage.btnProximoEndereco();
+        Thread.sleep(7000);
+        entregaPage.clickTipoDeEntregaRetira();
+        Thread.sleep(7000);
+        entregaPage.btnProximoEntrega();
+        Thread.sleep(7000);
+        pagamentoPage.PagBoleto();
+        Thread.sleep(7000);
+        pagamentoPage.FinalizaSuaCompra();
+        Thread.sleep(7000);
+        System.out.println(pagamentoPage.ObterNumeroPedido());
+    }
+
+    @Test
+    public void fluxoCompletoBoletoItemPorCategoriaRetira() throws Exception {
+        Thread.sleep(1000);
+        homePage.clickPneuPasseio();
+        Thread.sleep(1000);
+        vitrinePage.clickItemCss();
+        Thread.sleep(1000);
+        itemPage.clickBtnComprar();
+        Thread.sleep(5000);
+        carrinhoPage.clickFinalizarCompra();
+        loginPage.emailUsuarioAntigo();
+        loginPage.senhaUsuarioAntigo();
+        loginPage.btnEntrar();
+        Thread.sleep(7000);
+        enderecoPage.selecionarEndereco();
+        Thread.sleep(7000);
+        enderecoPage.btnProximoEndereco();
+        Thread.sleep(7000);
+        entregaPage.clickTipoDeEntregaRetira();
+        Thread.sleep(7000);
+        entregaPage.btnProximoEntrega();
+        Thread.sleep(7000);
+        pagamentoPage.PagBoleto();
+        Thread.sleep(7000);
+        pagamentoPage.FinalizaSuaCompra();
+        Thread.sleep(7000);
+        System.out.println(pagamentoPage.ObterNumeroPedido());
+    }
+
+
+
 }
