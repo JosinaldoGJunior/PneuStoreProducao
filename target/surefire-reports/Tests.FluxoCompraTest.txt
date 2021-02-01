@@ -1,0 +1,60 @@
+-------------------------------------------------------------------------------
+Test set: Tests.FluxoCompraTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 4,309.67 s <<< FAILURE! - in Tests.FluxoCompraTest
+fluxoCompletoBoletoItemPorCategoriaRetira(Tests.FluxoCompraTest)  Time elapsed: 14.118 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'Qual Pneu você precisa?')]"}
+  (Session info: chrome=79.0.3945.117)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LSPSELB310BNB', ip: '10.0.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /tmp/.com.google.Chrome.z63hWS}, goog:chromeOptions: {debuggerAddress: localhost:44055}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 469d31896020f41e484847b4ce0...}
+Session ID: 469d31896020f41e484847b4ce0f550b
+*** Element info: {Using=xpath, value=//a[contains(text(),'Qual Pneu você precisa?')]}
+	at Tests.FluxoCompraTest.fluxoCompletoBoletoItemPorCategoriaRetira(FluxoCompraTest.java:118)
+
+fluxoCompletoBoletoItemPorCategoriaNormal(Tests.FluxoCompraTest)  Time elapsed: 14.445 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'Qual Pneu você precisa?')]"}
+  (Session info: chrome=79.0.3945.117)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LSPSELB310BNB', ip: '10.0.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /tmp/.com.google.Chrome.Pbp8fp}, goog:chromeOptions: {debuggerAddress: localhost:46605}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 3b57da4cd82a28593ed4055248e...}
+Session ID: 3b57da4cd82a28593ed4055248e5b051
+*** Element info: {Using=xpath, value=//a[contains(text(),'Qual Pneu você precisa?')]}
+	at Tests.FluxoCompraTest.fluxoCompletoBoletoItemPorCategoriaNormal(FluxoCompraTest.java:55)
+
+fluxoCompletoBoletoItemPorPesquisaRetira(Tests.FluxoCompraTest)  Time elapsed: 4,309.67 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+cannot forward the request Failed to connect to /172.20.0.2:5555
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LSPSELB310BNB', ip: '10.0.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /tmp/.com.google.Chrome.PthALT}, goog:chromeOptions: {debuggerAddress: localhost:40859}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: f0e1abdc8872f86b5628ea53a2c...}
+Session ID: f0e1abdc8872f86b5628ea53a2c538d6
+	at Tests.FluxoCompraTest.fluxoCompletoBoletoItemPorPesquisaRetira(FluxoCompraTest.java:106)
+
+fluxoCompletoBoletoItemPorPesquisaNormal(Tests.FluxoCompraTest)  Time elapsed: 83.402 s  <<< ERROR!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <div role="group" class="flex-grow">...</div> is not clickable at point (469, 676). Other element would receive the click: <div class="loading">...</div>
+  (Session info: chrome=79.0.3945.117)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LSPSELB310BNB', ip: '10.0.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /tmp/.com.google.Chrome.kC9tM0}, goog:chromeOptions: {debuggerAddress: localhost:33909}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 0f50bc9905d69e72da522464934...}
+Session ID: 0f50bc9905d69e72da52246493464edd
+	at Tests.FluxoCompraTest.fluxoCompletoBoletoItemPorPesquisaNormal(FluxoCompraTest.java:45)
+
+fluxoCompletoBoletoItemPorPesquisaRetira(Tests.FluxoCompraTest)  Time elapsed: 0 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Session [f0e1abdc8872f86b5628ea53a2c538d6] was terminated due to FORWARDING_TO_NODE_FAILED
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LSPSELB310BNB', ip: '10.0.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /tmp/.com.google.Chrome.PthALT}, goog:chromeOptions: {debuggerAddress: localhost:40859}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: f0e1abdc8872f86b5628ea53a2c...}
+Session ID: f0e1abdc8872f86b5628ea53a2c538d6
+

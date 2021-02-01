@@ -116,4 +116,8 @@ public class HomePage extends BasePage {
         cliqueBotaoXpath("//a[contains(@href, '/categorias/passeio')]");
     }
 
+    public void clickNoMenu(){
+        cliqueBotaoXpath("//a[contains(text(),'Qual Pneu você precisa?')]");
+    }
+
 }
