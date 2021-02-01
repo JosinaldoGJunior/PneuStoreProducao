@@ -20,4 +20,23 @@ public class EnderecoPage extends BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(By.id("nextButtonSubmit")));
         cliqueBotao("nextButtonSubmit");
     }
+    public void adicionarEndereco(){
+        cliqueBotaoCSS(".js-add-new-address");
+    }
+
+    public void escreverCasa(){
+        escreverTexto("addressTitle","casa");
+    }
+
+    public void escreverCEP(){
+        escreverTexto("postcode","29047058");
+    }
+
+    public void escreverNumeroDaCasa(){
+        escreverTexto("line2","411");
+    }
+
+    public void clickNumeroDaCasa(){
+        cliqueBotao("line2");
+    }
 }

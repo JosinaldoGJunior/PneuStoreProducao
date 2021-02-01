@@ -1,0 +1,110 @@
+-------------------------------------------------------------------------------
+Test set: SuiteDeTestes.SuiteDeTestes
+-------------------------------------------------------------------------------
+Tests run: 17, Failures: 4, Errors: 9, Skipped: 0, Time elapsed: 232.309 s <<< FAILURE! - in SuiteDeTestes.SuiteDeTestes
+fazerCadastro(Tests.CadastroTest)  Time elapsed: 24.463 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<Ol[Ã¡] Cliente!> but was:<Ol[á] Cliente!>
+	at Tests.CadastroTest.fazerCadastro(CadastroTest.java:26)
+
+testBuscarPorItemFarroad(Tests.BuscarTest)  Time elapsed: 14.865 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<R$ 502,56[Ã  vista no cartÃ£o de dÃ©]bito> but was:<R$ 502,56[à vista no cartão de dé]bito>
+	at Tests.BuscarTest.testBuscarPorItemFarroad(BuscarTest.java:62)
+
+testBuscarPorItemPirelli(Tests.BuscarTest)  Time elapsed: 20.453 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[3]/a/h2 (tried for 10 second(s) with 500 milliseconds interval)
+	at Tests.BuscarTest.testBuscarPorItemPirelli(BuscarTest.java:25)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//div[3]/a/h2"}
+  (Session info: chrome=79.0.3945.117)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LSPSELB310BNB', ip: '10.0.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /tmp/.com.google.Chrome.w4xJqh}, goog:chromeOptions: {debuggerAddress: localhost:39287}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 041c0448c8d9fdcbf3352d5446a...}
+Session ID: 041c0448c8d9fdcbf3352d5446a84bae
+*** Element info: {Using=xpath, value=//div[3]/a/h2}
+	at Tests.BuscarTest.testBuscarPorItemPirelli(BuscarTest.java:25)
+
+testBuscarPorItemAptany(Tests.BuscarTest)  Time elapsed: 15.091 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<R$ 354,16[Ã  vista no cartÃ£o de dÃ©]bito> but was:<R$ 354,16[à vista no cartão de dé]bito>
+	at Tests.BuscarTest.testBuscarPorItemAptany(BuscarTest.java:79)
+
+testBuscarPorItemContinental(Tests.BuscarTest)  Time elapsed: 14.59 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<R$ 499,90[Ã  vista no cartÃ£o de dÃ©]bito> but was:<R$ 499,90[à vista no cartão de dé]bito>
+	at Tests.BuscarTest.testBuscarPorItemContinental(BuscarTest.java:45)
+
+fluxoCompletoBoletoItemPorPesquisaNormal(Tests.FluxoCompraTest)  Time elapsed: 52.276 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+unknown error: session deleted because of page crash
+from tab crashed
+  (Session info: chrome=79.0.3945.117)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LSPSELB310BNB', ip: '10.0.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /tmp/.com.google.Chrome.afzJgM}, goog:chromeOptions: {debuggerAddress: localhost:33973}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: ddcf545084c4c31756866caed77...}
+Session ID: ddcf545084c4c31756866caed7756d54
+	at Tests.FluxoCompraTest.fluxoCompletoBoletoItemPorPesquisaNormal(FluxoCompraTest.java:39)
+
+fluxoCompletoBoletoItemPorPesquisaNormal(Tests.FluxoCompraTest)  Time elapsed: 52.276 s  <<< ERROR!
+org.openqa.selenium.NoSuchSessionException: 
+invalid session id
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LSPSELB310BNB', ip: '10.0.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /tmp/.com.google.Chrome.afzJgM}, goog:chromeOptions: {debuggerAddress: localhost:33973}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: ddcf545084c4c31756866caed77...}
+Session ID: ddcf545084c4c31756866caed7756d54
+
+fluxoCompletoBoletoItemPorPesquisaRetira(Tests.FluxoCompraTest)  Time elapsed: 0.034 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Session [ddcf545084c4c31756866caed7756d54] was terminated due to BROWSER_TIMEOUT
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LSPSELB310BNB', ip: '10.0.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /tmp/.com.google.Chrome.afzJgM}, goog:chromeOptions: {debuggerAddress: localhost:33973}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: ddcf545084c4c31756866caed77...}
+Session ID: ddcf545084c4c31756866caed7756d54
+
+fluxoCompletoBoletoItemPorPesquisaRetira(Tests.FluxoCompraTest)  Time elapsed: 0.035 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Session [ddcf545084c4c31756866caed7756d54] was terminated due to BROWSER_TIMEOUT
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LSPSELB310BNB', ip: '10.0.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /tmp/.com.google.Chrome.afzJgM}, goog:chromeOptions: {debuggerAddress: localhost:33973}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: ddcf545084c4c31756866caed77...}
+Session ID: ddcf545084c4c31756866caed7756d54
+
+fluxoCompletoBoletoItemPorCategoriaNormal(Tests.FluxoCompraTest)  Time elapsed: 0.044 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Session [ddcf545084c4c31756866caed7756d54] was terminated due to BROWSER_TIMEOUT
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LSPSELB310BNB', ip: '10.0.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /tmp/.com.google.Chrome.afzJgM}, goog:chromeOptions: {debuggerAddress: localhost:33973}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: ddcf545084c4c31756866caed77...}
+Session ID: ddcf545084c4c31756866caed7756d54
+
+fluxoCompletoBoletoItemPorCategoriaNormal(Tests.FluxoCompraTest)  Time elapsed: 0.045 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Session [ddcf545084c4c31756866caed7756d54] was terminated due to BROWSER_TIMEOUT
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LSPSELB310BNB', ip: '10.0.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /tmp/.com.google.Chrome.afzJgM}, goog:chromeOptions: {debuggerAddress: localhost:33973}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: ddcf545084c4c31756866caed77...}
+Session ID: ddcf545084c4c31756866caed7756d54
+
+fluxoCompletoBoletoItemPorCategoriaRetira(Tests.FluxoCompraTest)  Time elapsed: 0.031 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Session [ddcf545084c4c31756866caed7756d54] was terminated due to BROWSER_TIMEOUT
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LSPSELB310BNB', ip: '10.0.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /tmp/.com.google.Chrome.afzJgM}, goog:chromeOptions: {debuggerAddress: localhost:33973}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: ddcf545084c4c31756866caed77...}
+Session ID: ddcf545084c4c31756866caed7756d54
+
+fluxoCompletoBoletoItemPorCategoriaRetira(Tests.FluxoCompraTest)  Time elapsed: 0.032 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Session [ddcf545084c4c31756866caed7756d54] was terminated due to BROWSER_TIMEOUT
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LSPSELB310BNB', ip: '10.0.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /tmp/.com.google.Chrome.afzJgM}, goog:chromeOptions: {debuggerAddress: localhost:33973}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: ddcf545084c4c31756866caed77...}
+Session ID: ddcf545084c4c31756866caed7756d54
+
